@@ -1,6 +1,6 @@
-import React, {Fragment} from react;
+import React, {Fragment} from "react";
 
-function LoginCard(){
+export default function LoginCard(){
     return(
         <Fragment>
             <h1>hiiiii</h1>
