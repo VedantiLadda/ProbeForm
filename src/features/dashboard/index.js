@@ -1,12 +1,14 @@
 import React from 'react';
 import Navbar from '../../sharedComponents/Navbar';
-import ProfileCard from './components/ProfileCard';
-
+import '../../main.css';
+import ProfileCard from './components/Profile Card/ProfileCard';
 const Dashboard = () => {
     return (
         <>
             <Navbar/>
-            <ProfileCard/>
+            <div id="bodyRow" className="row block">
+                <ProfileCard/>
+            </div>
         </>
     )
 }

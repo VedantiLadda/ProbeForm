@@ -1,0 +1,24 @@
+input:-webkit-autofill,
+input:-webkit-autofill:active  {
+    box-shadow: 0 0 0 30px #ffffff inset !important;
+}
+input[type=password]:not(.browser-default),
+input[type=text]:not(.browser-default),
+input[type=email]:not(.browser-default),
+input[type=number]:not(.browser-default) {
+    background-color: transparent !important;
+    border: none;
+    color: rgba(0, 0, 0, 0.42);
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.42);
+    border-radius: 0;
+    outline: none;
+    height: 3rem;
+    width: 100%;
+    font-size: 16px;
+    margin: 0 0 8px 0;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: content-box;
+    transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
