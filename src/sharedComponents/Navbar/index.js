@@ -1,12 +1,12 @@
 import React from 'react';
-import 'main.css';
+import './main.css';
 const Navbar = () => {
     return (
         <div className="navbar-fixed">
             <nav data-component="Navbar">
                 <div className="nav-wrapper">
                     <label className="brand-logo center"></label>
-                    <label>Logout</label>
+                    <label className="logout">Logout</label>
                 </div>
             </nav>
         </div>
