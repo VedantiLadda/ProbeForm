@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import * as allActions from './client/actions';
+import * as allActions from './actions';
 import Root from "./router";
 
 
