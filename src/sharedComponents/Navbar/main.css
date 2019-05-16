@@ -1,0 +1,47 @@
+  nav {
+    color: #ffffff;
+    background-color: #9c27b0;
+    width: 100%;
+  }
+  nav a {
+    color: #ffffff;
+  }
+  .navbar-fixed {
+    position: relative;
+    height: 64px;
+    z-index: 997;
+  }
+  .navbar-fixed nav {
+    position: fixed;
+  }
+  .nav-wrapper {
+    min-height: 56px;
+    position: relative;
+  }
+  nav .brand-logo {
+    position: absolute;
+    color: #ffffff;
+    display: table;
+    font-size: 2.1rem;
+    padding: 0;
+  }
+  nav, nav .nav-wrapper {
+    height: 64px;
+    line-height: 64px;
+  }
+  nav .brand-logo.center {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  #logout {
+    float: right;
+    padding-right: 3%;
+    color: #f5f5f5;
+    font-size: 1.15rem;
+  }
+  @media only screen and (min-width: 601px){
+    .navbar-fixed {
+        height: 64px;
+    }
+  }
