@@ -1,13 +1,13 @@
 import React, {Fragment} from "react";
-const Button=(props)=>{
+const Label=(props)=>{
     console.log(props.children);
     return(
         <Fragment>
-            <button className="btn-large">
+            <label>
                 {props.children}       
-            </button>       
+            </label>       
         </Fragment>
     )
 }
 
-export default Button;
+export default Label;

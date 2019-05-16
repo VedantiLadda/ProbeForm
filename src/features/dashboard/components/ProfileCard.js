@@ -1,30 +1,22 @@
 import React from 'react';
+import './main.css';
 
 const ProfileCard = () => {
     return (
-        <div className="row">
-        <div className="col s12 offset-m6 m6" data-component="Login">
-            <div className="card">
-                <div className="card-action">
-                    <h3>Probe Form</h3>
-                </div>
-                <div className="card-content">
-                    <div>
-                        <label>Username</label>
-                        <input type="text" id="username"/>
-                    </div><br/>
-                    <div>
-                        <label>Password</label>
-                        <input type="password" id="password"/>
-                    </div><br/>
-                    <div>
-                       <button id="login" className="btn-large">Login</button>
-                    </div><br/>
-                    <div id="errorMessage" className="errorMessage"></div>
-                </div>
+        <div class="col s12 m4 l3 profile">
+            <div id="profile" data-component="Profile" class="card center">
+                <label>Name</label>
+                <input type="text" placeholder="name" disabled />
+                <label>Email</label>
+                <input type="email" placeholder="email" disabled />
+                <label>Designation</label>
+                <input type="text" placeholder="designation" disabled />
+                <button class="button">Cancel</button>
+                <button class="button">Submit</button>
+                <button class="button">Change Password</button>
+                <button class="button">Edit Profile</button>
             </div>
         </div>
-    </div>
     )
 }
 

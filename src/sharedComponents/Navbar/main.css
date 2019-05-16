@@ -34,7 +34,7 @@
     transform: translateX(-50%);
   }
   
-  #logout {
+  .logout {
     float: right;
     padding-right: 3%;
     color: #f5f5f5;
