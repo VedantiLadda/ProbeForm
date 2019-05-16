@@ -1,13 +1,13 @@
 import React, {Fragment} from "react";
-const Button=(props)=>{
+const Input=(props)=>{
     console.log(props.children);
     return(
         <Fragment>
-            <button className="btn-large">
+            <input type={props.type}>
                 {props.children}       
-            </button>       
+            </input>       
         </Fragment>
     )
 }
 
-export default Button;
+export default Input;
