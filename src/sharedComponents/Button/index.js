@@ -1,10 +1,10 @@
 import React, {Fragment} from "react";
 const Button=(props)=>{
-    console.log(props.children);
+    const {children,className} = props;
     return(
         <Fragment>
-            <button className="btn-large">
-                {props.children}       
+            <button className={className}>
+                {children}       
             </button>       
         </Fragment>
     )
