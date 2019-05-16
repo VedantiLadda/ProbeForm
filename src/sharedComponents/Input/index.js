@@ -1,4 +1,6 @@
 import React, {Fragment} from "react";
+import './main.css';
+
 const Input=(props)=>{
     return(
         <Fragment>

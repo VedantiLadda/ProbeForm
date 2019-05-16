@@ -9,7 +9,7 @@ import Input from '../../../sharedComponents/Input';
 const LoginCard=()=>{
     return(
         <Fragment>
-            <form action="/v1/apis/login" method="post">
+            <form>
                 <div className="row">
                     <div className="col s12 offset-m6 m6" data-component="Login">
                         <Card className="card">
