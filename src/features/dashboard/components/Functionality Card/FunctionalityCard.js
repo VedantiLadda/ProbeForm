@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 // import '../../../main.css';
-import Card from "./cardComp";
+import Card from "../Card Component/cardComp";
 
 export default class FunctionalityCard extends React.Component {
     constructor(props) {
