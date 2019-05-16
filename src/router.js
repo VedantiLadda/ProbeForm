@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 import {BrowserRouter,Route} from 'react-router-dom';
-import Login from './client/features/login/components/LoginCard';
+import Login from './features/login/components/LoginCard';
 
 export default function Router(){
     return(<BrowserRouter>
