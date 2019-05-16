@@ -1,10 +1,9 @@
 import React from 'react';
 import './main.css';
-
 const ProfileCard = () => {
     return (
-        <div class="col s12 m4 l3 profile">
-            <div id="profile" data-component="Profile" class="card center">
+        <div class="col s12 m4 profile">
+            <div id="profile" data-component="Profile" class="card profileCard center">
                 <label>Name</label>
                 <input type="text" placeholder="name" disabled />
                 <label>Email</label>
