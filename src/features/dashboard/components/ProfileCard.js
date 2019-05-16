@@ -1,20 +1,25 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import './main.css';
+import Card from '../../../sharedComponents/Card';
+import Button from '../../../sharedComponents/Button';
+import Label from '../../../sharedComponents/Label';
+import Input from '../../../sharedComponents/Input';
+
 const ProfileCard = () => {
     return (
-        <div class="col s12 m4 profile">
-            <div id="profile" data-component="Profile" class="card profileCard center">
-                <label>Name</label>
-                <input type="text" placeholder="name" disabled />
-                <label>Email</label>
-                <input type="email" placeholder="email" disabled />
-                <label>Designation</label>
-                <input type="text" placeholder="designation" disabled />
-                <button class="button">Cancel</button>
-                <button class="button">Submit</button>
-                <button class="button">Change Password</button>
-                <button class="button">Edit Profile</button>
-            </div>
+        <div className="col s12 m4 profile">
+            <Card className="card profileCard center">
+                <Label>Name</Label>
+                <Input type="text" disabled/>
+                <Label>Email</Label>
+                <Input type="email" disabled/>
+                <Label>Designation</Label>
+                <Input type="text" disabled/>
+                <Button className="button">Cancel</Button>
+                <Button className="button">Submit</Button>
+                <Button className="button">Change Password</Button>
+                <Button className="button">Edit Profile</Button>
+            </Card>
         </div>
     )
 }
