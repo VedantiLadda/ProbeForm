@@ -1,31 +1,36 @@
 import React, {Fragment} from "react";
 import './LoginCard.css';
 import '../../../main.css';
+import Card from '../../../sharedComponents/Card';
+import Button from '../../../sharedComponents/Button';
+import Label from '../../../sharedComponents/Label';
+import Input from '../../../sharedComponents/Input';
+
 const LoginCard=()=>{
     return(
         <Fragment>
             <form action="/v1/apis/login" method="post">
                 <div className="row">
                     <div className="col s12 offset-m6 m6" data-component="Login">
-                        <div className="card">
+                        <Card>
                             <div className="card-action">
                                 <h3>Probe Form</h3>
                             </div>
                             <div className="card-content">
                                 <div>
-                                    <label>Username</label>
-                                    <input type="text" />
+                                    <Label>Username</Label>
+                                    <Input type={"text"}/>
                                 </div><br />
                                 <div>
-                                    <label>Password</label>
-                                    <input type="password" />
+                                    <Label>Password</Label>
+                                    <Input type={"password"}/>
                                 </div><br />
                                 <div>
-                                    <button className="btn-large">Login</button>
+                                    <Button>Login</Button>
                                 </div><br />
                                 <div className="errorMessage"></div>
                             </div>
-                        </div>
+                        </Card>
                     </div>
                 </div>
             </form>
