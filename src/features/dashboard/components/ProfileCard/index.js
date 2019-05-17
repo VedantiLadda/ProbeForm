@@ -12,20 +12,30 @@ class ProfileCard extends React.Component {
             disabled: true
         }
     }
+    editEnable = () => {
+        this.setState({
+            disabled: false,
+        })
+    }
+    editDisable = () => {
+        this.setState({
+            disabled: true,
+        })
+    }
     render() {
         return (
             <div className="col s12 m4 l3 profile">
                 <Card className="card profileCard center">
                     <Label>Name</Label>
-                    <Input type="text" disabled={this.state.disabled}/>
+                    <Input type="text" disabled={this.state.disabled} />
                     <Label>Email</Label>
-                    <Input type="email" disabled={this.state.disabled}/>
+                    <Input type="email" disabled={this.state.disabled} />
                     <Label>Designation</Label>
-                    <Input type="text" disabled={this.state.disabled}/>
-                    <Button className="button">Cancel</Button>
-                    <Button className="button">Submit</Button>
-                    <Button className="button">Change Password</Button>
-                    <Button className="button">Edit Profile</Button>
+                    <Input type="text" disabled={this.state.disabled} />
+                    <Button className="button" display={!this.state.disabled} handleClick={this.editDisable.bind(this)}>Cancel</Button>
+                    <Button className="button" display={!this.state.disabled}>Submit</Button>
+                    <Button className="button" display={this.state.disabled}>Change Password</Button>
+                    <Button className="button" display={this.state.disabled} handleClick={this.editEnable.bind(this)}>Edit Profile</Button>
                 </Card>
             </div>
         )

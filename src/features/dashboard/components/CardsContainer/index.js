@@ -11,7 +11,7 @@ export default class CardsContainer extends React.Component {
     }
 
     render() {
-        const cardContentDisplay = this.state.cardContent.map(val => <Card cardLabel={val} />);
+        const cardContentDisplay = this.state.cardContent.map(val => <Card key={val} cardLabel={val} />);
         return (
             <Fragment>
                 <div className="container col s12 m8 l9">
