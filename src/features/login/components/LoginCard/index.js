@@ -1,22 +1,22 @@
 import React, {Fragment} from "react";
-import './LoginCard.css';
-import '../../../main.css';
-import Card from '../../../sharedComponents/Card';
-import Button from '../../../sharedComponents/Button';
-import Label from '../../../sharedComponents/Label';
-import Input from '../../../sharedComponents/Input';
+import './main.css';
+import '../../../../main.css';
+import Card from '../../../../sharedComponents/Card';
+import Button from '../../../../sharedComponents/Button';
+import Label from '../../../../sharedComponents/Label';
+import Input from '../../../../sharedComponents/Input';
 
 const LoginCard=()=>{
     return(
         <Fragment>
-            <form action="/v1/apis/login" method="post">
+            <form>
                 <div className="row">
                     <div className="col s12 offset-m6 m6" data-component="Login">
                         <Card className="card">
                             <div className="card-action">
                                 <h3>Probe Form</h3>
                             </div>
-                            <div className="card-content">
+                            <div className="pad-24">
                                 <div>
                                     <Label>Username</Label>
                                     <Input type="text"/>
