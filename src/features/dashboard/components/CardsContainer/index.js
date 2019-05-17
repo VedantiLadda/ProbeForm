@@ -1,11 +1,10 @@
 import React, { Fragment } from "react";
-// import '../../../main.css';
-import Card from "./cardComp";
+import '../../../../main.css'
+import Card from "../cardComp";
 
-export default class FunctionalityCard extends React.Component {
+export default class CardsContainer extends React.Component {
     constructor(props) {
         super(props);
-
         this.state = {
             cardContent: ["Add Users", "Review Users", "Add Questions", "Review Questions", "Create Role", "Skill Matrix"]
         }
@@ -13,7 +12,6 @@ export default class FunctionalityCard extends React.Component {
 
     render() {
         const cardContentDisplay = this.state.cardContent.map(val => <Card cardLabel={val} />);
-
         return (
             <Fragment>
                 <div className="container col s12 m8 l9">
