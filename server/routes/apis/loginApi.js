@@ -17,16 +17,7 @@ app.post('/', function(req, res, next) {
             res.send({"error":"Either your email or password is incorrect"})
         }else{
             var employee=result[0];
-            if(employee["type"]){
-                req.session.sapientId = employee["sapientId"]
-                req.session.email = employee["email"];
-                req.session.type = employee["type"];
-                if(req.session.type){
-                    res.send(result);
-                } 
-            } else{
-                console.log('user may be a candidate')
-            }
+            res.send(employee)
         }
     }
     mysql.login(email, pass, callback);

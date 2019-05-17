@@ -1,4 +1,9 @@
-export function handleLogin(username,password){
-    console.log(username);
-    console.log(password);
+import axios from 'axios';
+export function handleLogin(email,pass){
+    return (dispatch) => {
+        axios.post("http://localhost:5000/v1/apis/login",{email,pass}).then(res=>{
+            console.log(res);
+            dispatch({type:'LOGIN_RESPONSE',res})
+        });
+    }
 }
