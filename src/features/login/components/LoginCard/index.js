@@ -1,10 +1,10 @@
 import React, {Fragment} from "react";
-import './LoginCard.css';
-import '../../../main.css';
-import Card from '../../../sharedComponents/Card';
-import Button from '../../../sharedComponents/Button';
-import Label from '../../../sharedComponents/Label';
-import Input from '../../../sharedComponents/Input';
+import './main.css';
+import '../../../../main.css';
+import Card from '../../../../sharedComponents/Card';
+import Button from '../../../../sharedComponents/Button';
+import Label from '../../../../sharedComponents/Label';
+import Input from '../../../../sharedComponents/Input';
 
 const LoginCard=()=>{
     return(
@@ -16,7 +16,7 @@ const LoginCard=()=>{
                             <div className="card-action">
                                 <h3>Probe Form</h3>
                             </div>
-                            <div className="card-content">
+                            <div className="pad-24">
                                 <div>
                                     <Label>Username</Label>
                                     <Input type="text"/>

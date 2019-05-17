@@ -3,6 +3,9 @@
     display: table;
     clear: both;
 }
+.pad-24 {
+    padding: 24px;
+}
 h3 {
     font-size: 2.92rem;
     line-height: 110%;
