@@ -6,10 +6,10 @@ var path = require('path')
 
 app.post('/', function(req, res, next) {
     // console.log(req.body);
-    var sapientId = req.session.sapientId;
+    var sapientId = req.body.sapientId;
     var name = req.body.name;
     var email = req.body.email;
-    var type = req.session.type;
+    var type = req.body.type;
     var designation = req.body.designation;
     // console.log("this"+sapientId)
     var callback = function(err, result){
