@@ -33,13 +33,6 @@
     left: 50%;
     transform: translateX(-50%);
   }
-  
-  .logout {
-    float: right;
-    padding-right: 3%;
-    color: #f5f5f5;
-    font-size: 1.15rem;
-  }
   @media only screen and (min-width: 601px){
     .navbar-fixed {
         height: 64px;

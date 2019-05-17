@@ -6,7 +6,7 @@ import Root from "./router";
 
 function mapStateToProps(store){
     return{
-
+        login: store.login
     }
 }
 function mapDispatchToProps(dispatcher){
