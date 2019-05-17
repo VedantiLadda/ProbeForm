@@ -27,11 +27,11 @@ class ProfileCard extends React.Component {
             <div className="col s12 m4 l3 profile">
                 <Card className="card profileCard center">
                     <Label>Name</Label>
-                    <Input type="text" disabled={this.state.disabled} onchange={this.getNewName.bind(this)}/>
+                    <Input type="text" disabled={this.state.disabled} />
                     <Label>Email</Label>
-                    <Input type="email" disabled={this.state.disabled} onchange={this.getNewEmail.bind(this)}/>
+                    <Input type="email" disabled={this.state.disabled} />
                     <Label>Designation</Label>
-                    <Input type="text" disabled={this.state.disabled} onchange={this.getNewDesignation.bind(this)}/>
+                    <Input type="text" disabled={this.state.disabled} />
                     <Button className="button" display={!this.state.disabled} handleClick={this.editDisable.bind(this)}>Cancel</Button>
                     <Button className="button" display={!this.state.disabled}>Submit</Button>
                     <Button className="button" display={this.state.disabled}>Change Password</Button>

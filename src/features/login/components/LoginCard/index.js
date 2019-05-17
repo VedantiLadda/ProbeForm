@@ -48,7 +48,7 @@ class LoginCard extends Component{
                                         <Input type="password" onchange = {this.getPassword.bind(this)}/>
                                     </div><br />
                                     <div>
-                                        <Button className="btn-large" handleClick={this.test.bind(this)}>Login</Button>
+                                        <Button className="btn-large" display={true} handleClick={this.test.bind(this)}>Login</Button>
                                     </div><br />
                                     <div className="errorMessage"></div>
                                 </div>
