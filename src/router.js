@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter, Route, Redirect} from 'react-router-dom';
+import React, { Fragment } from 'react';
+import { BrowserRouter, Route, Redirect } from 'react-router-dom';
 import Login from './features/login/components/LoginCard';
 import Dashboard from './features/dashboard';
 
