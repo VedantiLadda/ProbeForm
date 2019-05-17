@@ -10,9 +10,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'src')));
 
 // app.use('/', require('./routes/login'));
-app.use('/login', require('./routes/login'));
+// app.use('/login', require('./routes/login'));
 // // app.use('/forgotPass', require('./routes/forgotPass'));
-// app.use('/v1/apis', require('./routes/apis/api-index'));
+app.use('/v1/apis', require('./routes/apis/api-index'));
 // app.use('/admin', require('./routes/admin/index'));
 
 module.exports = app;
