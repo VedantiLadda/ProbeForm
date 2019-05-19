@@ -1,16 +1,18 @@
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import * as allActions from './actions';
-import Root from "./router";
+import Root from './router';
 
 
-function mapStateToProps(store){
-    return{
-        login: store.login
-    }
+function mapStateToProps(store) {
+  return {
+    login: store.login,
+  };
 }
-function mapDispatchToProps(dispatcher){
-    return bindActionCreators(allActions, dispatcher);
+function mapDispatchToProps(dispatcher) {
+  return bindActionCreators(allActions, dispatcher);
 }
 
-export var Main = connect(mapStateToProps, mapDispatchToProps)(Root);
+const Main = connect(mapStateToProps, mapDispatchToProps)(Root);
+
+export default Main;

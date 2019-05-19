@@ -4,9 +4,9 @@ var mysql = require("./mySqlCalls.js");
 var qs=require("querystring");
 var path = require('path')
 
-app.get('/', function(req, res, next) {
+app.post('/', function(req, res, next) {
     // console.log(req.body);
-    var type = req.session.type;
+    var type = req.body.type;
     var callback = function(err, result){
         if(err){
             console.log(err.message);
@@ -15,6 +15,7 @@ app.get('/', function(req, res, next) {
         if(result.length==0){
             res.redirect("/login?error="+qs.escape("employee not found"));
         }else{
+            console.log(result)
            res.send(result);
         //    res.end(result);
         }
