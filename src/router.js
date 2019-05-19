@@ -37,7 +37,7 @@ export default class Router extends React.Component {
           exact
           path="/dashboard"
           render={() => {
-            if (this.props.login.email) {
+            if (login.email) {
               return <Dashboard {...this.props} />;
             }
 

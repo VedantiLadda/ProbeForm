@@ -4,7 +4,6 @@ import Card from '../../../../sharedComponents/Card';
 import Button from '../../../../sharedComponents/Button';
 import Label from '../../../../sharedComponents/Label';
 import Input from '../../../../sharedComponents/Input';
-import { editProfile } from '../../action';
 
 class ProfileCard extends React.Component {
   constructor(props) {
@@ -39,11 +38,12 @@ class ProfileCard extends React.Component {
     }
 
     profileSubmit = () => {
-      const sapientId = '145001';
+      const sapientId = '145110';
+      const { editProfile } = this.props;
       const { fields } = this.state;
       const { name } = fields;
       const { email } = fields;
-      const type = 'super_admin';
+      const type = 'hr';
       const { designation } = fields;
       this.editDisable();
       editProfile(sapientId, name, email, type, designation);
@@ -51,17 +51,17 @@ class ProfileCard extends React.Component {
 
     render() {
       const {
-        name, email, disabled, designation,
+        name, email, designation, disabled,
       } = this.state;
       return (
         <div className="col s12 m4 l3 profile">
           <Card className="card profileCard center">
             <Label>Name</Label>
-            <Input type="text" value={name} name="name" disabled={disabled} onchange={this.getInput} />
+            <Input type="text" value={name} name="name" placeholder={name} disabled={disabled} onchange={this.getInput} />
             <Label>Email</Label>
-            <Input type="email" value={email} name="email" disabled={disabled} onchange={this.getInput} />
+            <Input type="email" value={email} name="email" placeholder={email} disabled={disabled} onchange={this.getInput} />
             <Label>Designation</Label>
-            <Input type="text" value={designation} name="designation" disabled={disabled} onchange={this.getInput} />
+            <Input type="text" value={designation} name="designation" placeholder={designation} disabled={disabled} onchange={this.getInput} />
             <Button className="button" display={!disabled} handleClick={this.editDisable}>Cancel</Button>
             <Button className="button" display={!disabled} handleClick={this.profileSubmit}>Submit</Button>
             <Button className="button" display={disabled}>Change Password</Button>
