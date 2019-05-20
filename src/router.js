@@ -14,9 +14,7 @@ import Dashboard from './features/dashboard';
 // export default Router;
 
 export default class Router extends React.Component {
-  componentDidMount() {
-
-  }
+  componentDidMount() {}
 
   render() {
     const { login } = this.props;

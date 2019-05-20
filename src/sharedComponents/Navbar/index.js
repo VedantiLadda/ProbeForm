@@ -2,7 +2,7 @@ import React from 'react';
 import Label from '../Label';
 import './main.css';
 
-const Navbar = (props) => {
+const Navbar = props => {
   const { type } = props;
   return (
     <div className="navbar-fixed">

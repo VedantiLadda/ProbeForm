@@ -9,19 +9,30 @@ import Modal from '../../sharedComponents/Modal';
 import ModalViews from '../modalViews';
 import '../../main.css';
 
-
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);
     props.getPermissions(props.login.type);
   }
 
+  componentDidMount() {
+    window.addEventListener('click', this.setModal);
+  }
+
+  setModal = e => {
+    const { setModal } = this.props;
+    if (e.target.className === 'modal') {
+      setModal('');
+    }
+  };
+
   render() {
     const { login, dashboard } = this.props;
     const permission = dashboard.modal;
     let modal = <></>;
-    if (dashboard.modal) { modal = <Modal dashboard={dashboard}>{ModalViews[permission]}</Modal>; }
-    console.log(ModalViews[permission]);
+    if (dashboard.modal) {
+      modal = <Modal dashboard={dashboard}>{ModalViews[permission]}</Modal>;
+    }
     return (
       <>
         <Navbar type={login.type} />
@@ -38,11 +49,14 @@ class Dashboard extends React.Component {
 function mapStateToProps(store) {
   return {
     login: store.login,
-    dashboard: store.dashboard,
+    dashboard: store.dashboard
   };
 }
 function mapDispatchToProps(dispatcher) {
   return bindActionCreators(allActions, dispatcher);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Dashboard);

@@ -6,15 +6,17 @@ export default function dashboard(defaultStore = { permissions: [], modal: '' },
         const permissionList = data.map(item => item.permission);
         return {
           ...defaultStore,
-          permissions: permissionList,
+          permissions: permissionList
         };
-      } break;
+      }
+      break;
     case 'SET_MODAL':
       return {
         ...defaultStore,
-        modal: action.permission,
+        modal: action.permission
       };
-    default: return defaultStore;
+    default:
+      return defaultStore;
   }
   return defaultStore;
 }

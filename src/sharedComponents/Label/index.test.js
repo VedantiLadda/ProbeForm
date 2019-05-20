@@ -13,7 +13,11 @@ describe('Label Component', () => {
     ReactDOM.unmountComponentAtNode(div);
   });
   it('receives props', () => {
-    const component = mount(<Label className="test"><div /></Label>);
+    const component = mount(
+      <Label className="test">
+        <div />
+      </Label>
+    );
     expect(component.props().className).toEqual('test');
   });
 });

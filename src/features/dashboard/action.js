@@ -7,12 +7,17 @@ export function editProfile(sapientId, name, email, auth, designation) {
   //   console.log(res);
   // });
   return {
-    type: 'EDIT_PROFILE', sapientId, name, email, auth, designation,
+    type: 'EDIT_PROFILE',
+    sapientId,
+    name,
+    email,
+    auth,
+    designation
   };
 }
 export function getPermissions(type) {
-  return (dispatch) => {
-    axios.post('http://localhost:5000/v1/apis/getPermissions', { type }).then((res) => {
+  return dispatch => {
+    axios.post('http://localhost:5000/v1/apis/getPermissions', { type }).then(res => {
       dispatch({ type: 'PERMISSIONS', res });
     });
   };
