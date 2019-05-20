@@ -1,20 +1,20 @@
 import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import './main.css';
 
 const Card = (props) => {
-  const { children, className } = props;
+  const { children, className, onClick } = props;
   return (
     <Fragment>
-      <div className={className}>
+      <div className={className} role="presentation" onClick={onClick} onKeyDown={onClick}>
         {children}
       </div>
     </Fragment>
   );
 };
 
-Card.propTypes = {
-  children: PropTypes.any,
-};
+// Card.propTypes = {
+//   children: PropTypes.any,
+// };
 
 export default Card;

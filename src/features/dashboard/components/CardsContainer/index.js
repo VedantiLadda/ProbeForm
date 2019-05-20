@@ -4,7 +4,7 @@ import Card from '../cardComp';
 
 const CardsContainer = (props) => {
   const { dashboard } = props;
-  const cardContentDisplay = dashboard.permissions.map(val => <Card key={val} cardLabel={val} />);
+  const cardContentDisplay = dashboard.permissions.map(val => <Card key={val} cardLabel={val} {...props} />);
   return (
     <Fragment>
       <div className="container col s12 m8 l9">

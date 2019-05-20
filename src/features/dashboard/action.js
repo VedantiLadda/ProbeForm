@@ -17,3 +17,7 @@ export function getPermissions(type) {
     });
   };
 }
+
+export function setModal(permission) {
+  return { type: 'SET_MODAL', permission };
+}
