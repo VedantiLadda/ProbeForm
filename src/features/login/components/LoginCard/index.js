@@ -44,7 +44,7 @@ class LoginCard extends Component{
                                 <div className="pad-24">
                                     <div>
                                         <Label>Username</Label>
-                                        <Input type="text" onchange = {this.getUsername.bind(this)}/>
+                                        <Input name='test' type="text" onchange = {this.getUsername.bind(this,'test')}/>
                                     </div><br/>
                                     <div>
                                         <Label>Password</Label>
