@@ -1,6 +1,7 @@
 import React, { Fragment, Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import PropTypes from 'prop-types';
 import * as allActions from '../../action';
 import './main.css';
 import '../../../../main.css';
@@ -68,6 +69,10 @@ class LoginCard extends Component {
       );
     }
 }
+
+LoginCard.propTypes = {
+  handleLogin: PropTypes.string.isRequired,
+};
 
 function mapStateToProps(store) {
   return {
