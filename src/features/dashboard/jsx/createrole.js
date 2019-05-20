@@ -62,7 +62,7 @@ Add Interviewer
       </label>
       <br />
     </div>
-    <button className="btn" id="submitForm" style="margin-top: 20px;">Submit</button>
+    <button className="btn" type="button" style="margin-top: 20px;">Submit</button>
     <br />
   </Fragment>
 );
