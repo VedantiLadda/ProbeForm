@@ -5,6 +5,8 @@ import * as allActions from './action';
 import Navbar from '../../sharedComponents/Navbar';
 import ProfileCard from './components/ProfileCard';
 import CardsContainer from './components/CardsContainer';
+import Modal from '../../sharedComponents/Modal';
+import ModalViews from '../modalViews';
 import '../../main.css';
 
 
@@ -15,7 +17,11 @@ class Dashboard extends React.Component {
   }
 
   render() {
-    const { login } = this.props;
+    const { login, dashboard } = this.props;
+    const permission = dashboard.modal;
+    let modal = <></>;
+    if (dashboard.modal) { modal = <Modal dashboard={dashboard}>{ModalViews[permission]}</Modal>; }
+    console.log(ModalViews[permission]);
     return (
       <>
         <Navbar type={login.type} />
@@ -23,6 +29,7 @@ class Dashboard extends React.Component {
           <ProfileCard {...this.props} />
           <CardsContainer {...this.props} />
         </div>
+        {modal}
       </>
     );
   }
