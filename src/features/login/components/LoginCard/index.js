@@ -1,16 +1,13 @@
 import React, { Fragment, Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
-import * as allActions from '../../action';
 import './main.css';
-import '../../../../main.css';
-import Card from '../../../../sharedComponents/Card';
-import Button from '../../../../sharedComponents/Button';
-import Label from '../../../../sharedComponents/Label';
-import Input from '../../../../sharedComponents/Input';
+import 'main.css';
+import Card from 'sharedComponents/Card';
+import Button from 'sharedComponents/Button';
+import Label from 'sharedComponents/Label';
+import Input from 'sharedComponents/Input';
 
-class LoginCard extends Component {
+export default class LoginCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -71,21 +68,3 @@ class LoginCard extends Component {
     );
   }
 }
-
-// LoginCard.propTypes = {
-//   handleLogin: PropTypes.string.isRequired,
-// };
-
-function mapStateToProps(store) {
-  return {
-    login: store.login
-  };
-}
-function mapDispatchToProps(dispatcher) {
-  return bindActionCreators(allActions, dispatcher);
-}
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(LoginCard);

@@ -1,6 +1,6 @@
 import React from 'react';
-import Input from '../../sharedComponents/Input';
-import formatString from '../../utilities/formatString';
+import Input from 'sharedComponents/Input';
+import formatString from 'utilities/formatString';
 
 const AddQuestion = () => {
   const designations = ['AL1', 'AL2', 'SAL1', 'SAL2'].map(d => (

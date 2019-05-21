@@ -29,6 +29,7 @@ class Dashboard extends React.Component {
   };
 
   render() {
+    console.log(this.props);
     const { login, dashboard, handleLogout } = this.props;
     const permission = dashboard.modal;
     let modal = <></>;
