@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import './main.css';
 
-const Card = (props) => {
+const Card = props => {
   const { children, className, onClick } = props;
   return (
     <Fragment>
@@ -15,7 +15,7 @@ const Card = (props) => {
 
 Card.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired
 };
 
 export default Card;
