@@ -27,6 +27,6 @@ function* editProfile(action) {
   }
 }
 
-export default function* dashboardSaga() {
+export default function* editProfileSaga() {
   yield takeEvery('EDIT_PROFILE', editProfile);
 }

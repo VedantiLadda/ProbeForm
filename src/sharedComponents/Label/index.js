@@ -3,10 +3,10 @@ import './main.css';
 import PropTypes from 'prop-types';
 
 const Label = props => {
-  const { children, className, htmlFor } = props;
+  const { children, className, htmlFor, handleClick } = props;
   return (
     <Fragment>
-      <label className={className} htmlFor={htmlFor}>
+      <label className={className} htmlFor={htmlFor} onClick={handleClick}>
         {children}
       </label>
     </Fragment>

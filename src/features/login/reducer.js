@@ -12,6 +12,7 @@ export default function login(
     case 'LOGIN_RESPONSE':
       if (action.res.data && !action.res.data.error) {
         const { data } = action.res;
+        sessionStorage.setItem('user', JSON.stringify(data));
         return {
           sapientId: data.sapientId,
           name: data.name,
@@ -33,6 +34,15 @@ export default function login(
         };
       }
       break;
+    case 'LOGOUT':
+      sessionStorage.removeItem('user');
+      return {
+        sapientId: '',
+        name: '',
+        email: '',
+        designation: '',
+        type: ''
+      };
     default:
       return defaultStore;
   }

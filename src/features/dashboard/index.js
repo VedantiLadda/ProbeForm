@@ -13,6 +13,8 @@ class Dashboard extends React.Component {
   constructor(props) {
     super(props);
     props.getPermissions(props.login.type);
+    props.getAllPermissions();
+    props.getAllTypes();
   }
 
   componentDidMount() {
@@ -27,7 +29,7 @@ class Dashboard extends React.Component {
   };
 
   render() {
-    const { login, dashboard } = this.props;
+    const { login, dashboard, handleLogout } = this.props;
     const permission = dashboard.modal;
     let modal = <></>;
     if (dashboard.modal) {
@@ -35,7 +37,7 @@ class Dashboard extends React.Component {
     }
     return (
       <>
-        <Navbar type={login.type} />
+        <Navbar type={login.type} handleLogout={handleLogout} />
         <div id="bodyRow" className="row block">
           <ProfileCard {...this.props} />
           <CardsContainer {...this.props} />

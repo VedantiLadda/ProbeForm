@@ -28,7 +28,7 @@ class LoginCard extends Component {
     }));
   };
 
-  test = () => {
+  login = () => {
     const { fields } = this.state;
     const { username } = fields;
     const { password } = fields;
@@ -57,7 +57,7 @@ class LoginCard extends Component {
                 </div>
                 <br />
                 <div>
-                  <Button className="btn-large" display handleClick={this.test}>
+                  <Button className="btn-large" display handleClick={this.login}>
                     Login
                   </Button>
                 </div>

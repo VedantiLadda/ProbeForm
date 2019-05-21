@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
-// import './LoginCard.css';
 import './main.css';
+import formatString from '../../utilities/formatString';
 
 const newModal = props => {
   const { children, dashboard } = props;
@@ -9,7 +9,7 @@ const newModal = props => {
       <div className="modal" style={{ display: 'block' }}>
         <div className="modal-content">
           <div className="modal-header">
-            <h5>{dashboard.modal}</h5>
+            <h5>{formatString(dashboard.modal)}</h5>
           </div>
           <br />
           {children}
