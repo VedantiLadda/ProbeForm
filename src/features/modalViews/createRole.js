@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
-import Input from '../../sharedComponents/Input';
-import Label from '../../sharedComponents/Label';
-import fomratString from '../../utilities/formatString';
+import Input from 'sharedComponents/Input';
+import Label from 'sharedComponents/Label';
+import fomratString from 'utilities/formatString';
 
 const CreateRole = () => {
   const permissions = [

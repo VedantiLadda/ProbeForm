@@ -1,7 +1,7 @@
 import React from 'react';
+import formatString from 'utilities/formatString';
 import Label from '../Label';
 import './main.css';
-import formatString from '../../utilities/formatString';
 
 const Navbar = props => {
   const { type, handleLogout } = props;

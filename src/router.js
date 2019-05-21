@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Redirect } from 'react-router-dom';
-import Login from './features/login';
-import Dashboard from './features/dashboard';
+import Login from 'features/login';
+import Dashboard from 'features/dashboard';
 
 export default class Router extends React.Component {
   componentDidMount() {

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import './main.css';
-import formatString from '../../utilities/formatString';
+import formatString from 'utilities/formatString';
 
 const newModal = props => {
   const { children, dashboard } = props;
