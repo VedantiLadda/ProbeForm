@@ -30,7 +30,7 @@ export default function login(
           name: data.name,
           email: data.email,
           designation: data.designation,
-          type: data.auth
+          type: data.type
         };
       }
       break;

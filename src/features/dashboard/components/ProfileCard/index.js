@@ -1,9 +1,9 @@
 import React from 'react';
 import './main.css';
-import Card from '../../../../sharedComponents/Card';
-import Button from '../../../../sharedComponents/Button';
-import Label from '../../../../sharedComponents/Label';
-import Input from '../../../../sharedComponents/Input';
+import Card from 'sharedComponents/Card';
+import Button from 'sharedComponents/Button';
+import Label from 'sharedComponents/Label';
+import Input from 'sharedComponents/Input';
 
 class ProfileCard extends React.Component {
   constructor(props) {

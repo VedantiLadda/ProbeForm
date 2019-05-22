@@ -20,7 +20,7 @@ function* editProfile(action) {
         sapientId,
         name,
         email,
-        auth,
+        type: auth,
         designation
       }
     });

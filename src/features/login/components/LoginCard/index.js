@@ -35,36 +35,34 @@ export default class LoginCard extends Component {
 
   render() {
     return (
-      <Fragment>
-        <div className="row">
-          <div className="col s12 offset-m6 m6" data-component="Login">
-            <Card className="card">
-              <div className="card-action">
-                <h3>Probe Form</h3>
+      <div className="row">
+        <div className="col s12 offset-m6 m6" data-component="Login">
+          <Card className="card">
+            <div className="card-action">
+              <h3>Probe Form</h3>
+            </div>
+            <div className="pad-24">
+              <div>
+                <Label>Username</Label>
+                <Input type="text" name="username" onchange={this.getInput} />
               </div>
-              <div className="pad-24">
-                <div>
-                  <Label>Username</Label>
-                  <Input type="text" name="username" onchange={this.getInput} />
-                </div>
-                <br />
-                <div>
-                  <Label>Password</Label>
-                  <Input type="password" name="password" onchange={this.getInput} />
-                </div>
-                <br />
-                <div>
-                  <Button className="btn-large" display handleClick={this.login}>
-                    Login
-                  </Button>
-                </div>
-                <br />
-                <div className="errorMessage" />
+              <br />
+              <div>
+                <Label>Password</Label>
+                <Input type="password" name="password" onchange={this.getInput} />
               </div>
-            </Card>
-          </div>
+              <br />
+              <div>
+                <Button className="btn-large" display handleClick={this.login}>
+                  Login
+                </Button>
+              </div>
+              <br />
+              <div className="errorMessage" />
+            </div>
+          </Card>
         </div>
-      </Fragment>
+      </div>
     );
   }
 }

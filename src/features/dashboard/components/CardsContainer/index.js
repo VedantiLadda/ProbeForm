@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import '../../../../main.css';
+import 'main.css';
 import Card from '../cardComp';
 
 const CardsContainer = props => {

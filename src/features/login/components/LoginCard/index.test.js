@@ -1,12 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { mount, shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import LoginCard from './index';
 
 describe('Login Card test cases', () => {
-  const wrapper = mount(<LoginCard />);
-
+  let wrapper;
+  beforeEach(() => {
+    wrapper = mount(<LoginCard />);
+  });
   it('Check if state has fields username and password', () => {
-    expect(typeof wrapper.state().fields).toBe('object');
+    expect(wrapper.state().fields).toEqual({ username: '', password: '' });
+  });
+  it('renders nested components', () => {
+    ['Card', 'Button'].forEach(component => expect(wrapper.find(component).length).toEqual(1));
+    ['Label', 'Input'].forEach(component => expect(wrapper.find(component).length).toEqual(2));
   });
 });
