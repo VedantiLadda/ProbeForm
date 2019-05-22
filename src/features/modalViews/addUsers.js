@@ -1,6 +1,6 @@
 import React from 'react';
-import Input from '../../sharedComponents/Input';
-import formatString from '../../utilities/formatString';
+import Input from 'sharedComponents/Input';
+import formatString from 'utilities/formatString';
 
 const AddUsers = () => {
   const types = ['super_admin', 'hr', 'interviewer', 'Manager'].map(type => (

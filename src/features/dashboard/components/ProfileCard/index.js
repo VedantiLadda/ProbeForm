@@ -1,9 +1,9 @@
 import React from 'react';
 import './main.css';
-import Card from '../../../../sharedComponents/Card';
-import Button from '../../../../sharedComponents/Button';
-import Label from '../../../../sharedComponents/Label';
-import Input from '../../../../sharedComponents/Input';
+import Card from 'sharedComponents/Card';
+import Button from 'sharedComponents/Button';
+import Label from 'sharedComponents/Label';
+import Input from 'sharedComponents/Input';
 
 class ProfileCard extends React.Component {
   constructor(props) {
@@ -47,12 +47,13 @@ class ProfileCard extends React.Component {
   };
 
   profileSubmit = () => {
-    const sapientId = '145110';
+    const { login } = this.props;
     const { editProfile } = this.props;
     const { fields } = this.state;
+    const { sapientId } = login;
     const { name } = fields;
     const { email } = fields;
-    const type = 'hr';
+    const { type } = login;
     const { designation } = fields;
     this.editDisable();
     editProfile(sapientId, name, email, type, designation);

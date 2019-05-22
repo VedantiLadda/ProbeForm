@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import Modal from 'sharedComponents/Modal';
+import Navbar from 'sharedComponents/Navbar';
 import * as allActions from './action';
-import Navbar from '../../sharedComponents/Navbar';
 import ProfileCard from './components/ProfileCard';
 import CardsContainer from './components/CardsContainer';
-import Modal from '../../sharedComponents/Modal';
 import ModalViews from '../modalViews';
-import '../../main.css';
+import 'main.css';
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -29,6 +29,7 @@ class Dashboard extends React.Component {
   };
 
   render() {
+    console.log(this.props);
     const { login, dashboard, handleLogout } = this.props;
     const permission = dashboard.modal;
     let modal = <></>;
