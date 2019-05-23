@@ -1,7 +1,10 @@
+import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as allActions from 'actions';
-import Root from 'router';
+import * as allActions from './action';
+import LoginCard from './components/LoginCard';
+
+const Login = props => <LoginCard {...props} />;
 
 function mapStateToProps(store) {
   return {
@@ -12,9 +15,7 @@ function mapDispatchToProps(dispatcher) {
   return bindActionCreators(allActions, dispatcher);
 }
 
-const Main = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Root);
-
-export default Main;
+)(Login);
