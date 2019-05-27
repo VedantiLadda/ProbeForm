@@ -5,7 +5,6 @@ import './main.css';
 
 const Navbar = props => {
   const { type, handleLogout } = props;
-  console.log(props);
   return (
     <div className="navbar-fixed">
       <nav data-component="Navbar">

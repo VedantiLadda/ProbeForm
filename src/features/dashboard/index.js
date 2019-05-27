@@ -33,6 +33,8 @@ class Dashboard extends React.Component {
         this.onAddQuestion();
         break;
       case 'add_users':
+      case 'add_interviewer':
+      case 'add_hr':
         this.onAddUser();
         break;
       default:
@@ -61,7 +63,7 @@ class Dashboard extends React.Component {
   };
 
   onAddUser = () => {
-		const user = sendUserInfo();
+    const user = sendUserInfo();
     console.log(user);
     this.props.addUser(user);
   };
