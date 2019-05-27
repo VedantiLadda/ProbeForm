@@ -27,3 +27,30 @@ export function setModal(permission) {
 export function handleLogout() {
   return { type: 'LOGOUT' };
 }
+
+export function createRole(roleBody) {
+  return dispatch => {
+    axios.post('http://localhost:5000/v1/apis/create_role', roleBody).then(res => {
+      console.log(res);
+      dispatch({ type: 'CREATE_ROLE', res });
+    });
+  };
+}
+
+export function addQuestion(question) {
+  return dispatch => {
+    axios.post('http://localhost:5000/v1/apis/add_questions', question).then(res => {
+      console.log(res);
+      dispatch({ type: 'ADD_QUESTION', res });
+    });
+  };
+}
+
+export function addUser(user) {
+  return dispatch => {
+    axios.post('http://localhost:5000/v1/apis/add_users', user).then(res => {
+      console.log(res);
+      dispatch({ type: 'ADD_USER', res });
+    });
+  };
+}

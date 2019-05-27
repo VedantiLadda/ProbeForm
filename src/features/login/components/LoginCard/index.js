@@ -34,6 +34,11 @@ export default class LoginCard extends Component {
   };
 
   render() {
+    window.addEventListener('keydown', e => {
+      if (e.keyCode === 13) {
+        this.login();
+      }
+    });
     return (
       <div className="row">
         <div className="col s12 offset-m6 m6" data-component="Login">

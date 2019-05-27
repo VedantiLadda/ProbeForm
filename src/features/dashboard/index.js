@@ -8,6 +8,9 @@ import ProfileCard from './components/ProfileCard';
 import CardsContainer from './components/CardsContainer';
 import ModalViews from '../modalViews';
 import 'main.css';
+import { sendRoleInfo } from '../modalViews/createRole';
+import { sendQuestionInfo } from '../modalViews/addQuestion';
+import { sendUserInfo } from '../modalViews/addUsers';
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -20,6 +23,54 @@ class Dashboard extends React.Component {
   componentDidMount() {
     window.addEventListener('click', this.setModal);
   }
+
+  clickHandler = permission => {
+    switch (permission) {
+      case 'create_role':
+        this.onCreateRole();
+        break;
+      case 'add_questions':
+        this.onAddQuestion();
+        break;
+      case 'add_users':
+        this.onAddUser();
+        break;
+      default:
+        console.log(permission);
+    }
+  };
+
+  onAddQuestion = () => {
+    const question = sendQuestionInfo();
+    // console.log(question);
+    const { options } = question;
+    const questionData = {
+      text: question.questionText,
+      op1: options.op1,
+      op2: options.op2,
+      op3: options.op3,
+      op4: options.op4,
+      op5: options.op5,
+      answer: question.answer,
+      careerStage: options.careerStage,
+      technology: options.technology,
+      difficulty: options.difficulty
+    };
+    console.log(questionData);
+    this.props.addQuestion(questionData);
+  };
+
+  onAddUser = () => {
+		const user = sendUserInfo();
+    console.log(user);
+    this.props.addUser(user);
+  };
+
+  onCreateRole = () => {
+    const permissions = this.props.dashboard.allPermissions;
+    const data = sendRoleInfo(permissions);
+    this.props.createRole(data);
+  };
 
   setModal = e => {
     const { setModal } = this.props;
@@ -34,7 +85,11 @@ class Dashboard extends React.Component {
     const permission = dashboard.modal;
     let modal = <></>;
     if (dashboard.modal) {
-      modal = <Modal dashboard={dashboard}>{ModalViews[permission]}</Modal>;
+      modal = (
+        <Modal handleClick={this.clickHandler.bind(this, permission)} dashboard={dashboard}>
+          {ModalViews(permission, this.props)}
+        </Modal>
+      );
     }
     return (
       <>

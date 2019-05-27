@@ -1,6 +1,12 @@
 import * as actions from './action';
+import axios from 'axios';
 
 describe('Test suite for dashboard actions', () => {
+  beforeEach(() => {
+    axios.post = jest.fn(() => {
+        return Promise.resolve({});
+    });
+  });
   it('returns an action of type EDIT_PROFILE', () => {
     const params = ['145001', 'Sammed', 'samravan@publicissapient.com', 'super_admin'];
     const response = {

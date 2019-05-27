@@ -8,12 +8,13 @@ import Input from 'sharedComponents/Input';
 class ProfileCard extends React.Component {
   constructor(props) {
     super(props);
+    const { login: { name, email, designation} } = props;
     this.state = {
       disabled: true,
       fields: {
-        name: props.login.name,
-        email: props.login.email,
-        designation: props.login.designation
+        name,
+        email,
+        designation
       }
     };
   }

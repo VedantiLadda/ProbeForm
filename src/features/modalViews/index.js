@@ -3,10 +3,18 @@ import AddUsers from './addUsers';
 import AddQuestion from './addQuestion';
 import CreateRole from './createRole';
 
-const ModalViews = {
-  add_users: <AddUsers />,
-  add_questions: <AddQuestion />,
-  create_role: <CreateRole />
+const ModalViews = (permission, props) => {
+  switch (permission) {
+    case 'add_users':
+    case 'add_interviewer':
+      return <AddUsers props={props} />;
+    case 'add_questions':
+      return <AddQuestion />;
+    case 'create_role':
+      return <CreateRole />;
+    default:
+      return null;
+  }
 };
 
 export default ModalViews;

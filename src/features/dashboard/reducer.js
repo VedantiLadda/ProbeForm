@@ -1,5 +1,5 @@
 export default function dashboard(
-  defaultStore = { permissions: [], modal: '', allPermissions: [], allTypes: [] },
+  defaultStore = { permissions: [], modal: '', allPermissions: [], allTypes: [], questionData: {} },
   action
 ) {
   switch (action.type) {
@@ -28,6 +28,10 @@ export default function dashboard(
         ...defaultStore,
         allTypes: action.data
       };
+    case 'CREATE_ROLE':
+    case 'ADD_USER':
+    case 'ADD_QUESTION':
+      break;
     default:
       return defaultStore;
   }
