@@ -1,9 +1,10 @@
 import React, { Fragment } from 'react';
 import './main.css';
 import formatString from 'utilities/formatString';
+import Button from 'sharedComponents/Button';
 
 const newModal = props => {
-  const { children, dashboard } = props;
+  const { children, dashboard, handleClick } = props;
   return (
     <Fragment>
       <div className="modal" style={{ display: 'block' }}>
@@ -13,9 +14,9 @@ const newModal = props => {
           </div>
           <br />
           {children}
-          <button className="btn" type="button">
+          <Button className="btn" type="button" display="visible" handleClick={handleClick}>
             Submit
-          </button>
+          </Button>
           <div className="errorMessage" />
         </div>
       </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
-import Card from './index';
+import Card from '../index';
 
 describe('Card Component', () => {
   const mockFn = jest.fn();

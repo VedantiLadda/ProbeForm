@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
-import Button from './index';
+import Button from '../index';
 
 describe('Button', () => {
   const mockFn = jest.fn();

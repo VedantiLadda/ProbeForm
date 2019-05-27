@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
-import Label from './index';
+import Label from '../index';
 
 describe('Label Component', () => {
   const mockFn = jest.fn();
