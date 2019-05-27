@@ -2,7 +2,8 @@ import React from 'react';
 import Input from 'sharedComponents/Input';
 import formatString from 'utilities/formatString';
 
-const userDetails = { designation: 'AL1', type: 'super_admin' };
+let currentType = [];
+const userDetails = { designation: 'AL1', type: currentType[0] };
 
 const handleTextInput = e => {
   const key = e.target.name;
@@ -15,7 +16,8 @@ export function sendUserInfo() {
 
 const AddUsers = ({ props }) => {
   const { allTypes } = props.dashboard;
-  const { currentType } = props;
+  currentType = [props.login.type];
+  userDetails.type = currentType;
   console.log(currentType);
   let types = [];
   if (currentType === 'super_admin') {
@@ -25,7 +27,7 @@ const AddUsers = ({ props }) => {
       </option>
     ));
   } else {
-    types = allTypes.map(type => (
+    types = currentType.map(type => (
       <option key={type} value={type}>
         {formatString(type)}
       </option>

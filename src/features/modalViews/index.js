@@ -7,6 +7,7 @@ const ModalViews = (permission, props) => {
   switch (permission) {
     case 'add_users':
     case 'add_interviewer':
+    case 'add_hr':
       return <AddUsers props={props} />;
     case 'add_questions':
       return <AddQuestion />;
