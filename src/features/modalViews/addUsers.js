@@ -16,11 +16,12 @@ export function sendUserInfo() {
 
 const AddUsers = ({ props }) => {
   const { allTypes } = props.dashboard;
+  console.log(allTypes);
   currentType = [props.login.type];
   userDetails.type = currentType;
   console.log(currentType);
   let types = [];
-  if (currentType === 'super_admin') {
+  if (currentType == 'super_admin') {
     types = allTypes.map(type => (
       <option key={type} value={type}>
         {formatString(type)}
